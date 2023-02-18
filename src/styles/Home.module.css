@@ -1,7 +1,13 @@
+.linkstyle {
+  font-weight: 700;
+  color: blue;
+  text-decoration: underline;
+}
+
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
