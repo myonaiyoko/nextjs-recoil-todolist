@@ -1,15 +1,17 @@
-import { Head } from "next/document"
-import styles from '@/styles/Home.module.css'
 import { useRecoilValue } from "recoil"
-import { TodoListState } from "@/atoms/TodoListAtom"
+import { todoListState } from "@/atoms/TodoListAtom"
+import { todoListCountSelector } from "@/selectors/TodoListCountSelector"
+
 
 export const TodoList = () => {
-    const todoList = useRecoilValue(TodoListState)
+    const todoList = useRecoilValue(todoListState)
+    const todoListCount = useRecoilValue(todoListCountSelector)
     
     return (
         <>
         <main>
             <div>
+                {todoListCount}
                 <table border={1}>
                     <tr>
                         <td width={50} align="center">ID</td>

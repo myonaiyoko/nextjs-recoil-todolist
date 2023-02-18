@@ -1,17 +1,15 @@
-import Head from 'next/head'
-import styles from '@/styles/Home.module.css'
 import { useRecoilState } from "recoil"
-import { TodoIdState } from '@/atoms/TodoIdAtom'
-import { TodoNameState } from "@/atoms/TodoNameAtom"
-import { TodoContentState } from '@/atoms/TodoContentAtom'
-import { TodoListState } from '@/atoms/TodoListAtom'
+import { todoIdState } from '@/atoms/TodoIdAtom'
+import { todoNameState } from "@/atoms/TodoNameAtom"
+import { todoContentState } from '@/atoms/TodoContentAtom'
+import { todoListState } from '@/atoms/TodoListAtom'
 import TodoType from '@/types/TodoType'
 
 export const NewTodo = () => {
-    const [todoId, setTodoId] = useRecoilState(TodoIdState)
-    const [todoName, setTodoName] = useRecoilState(TodoNameState)
-    const [todoContent, setTodoContent] = useRecoilState(TodoContentState)
-    const [todoList, setTodoList] = useRecoilState(TodoListState)
+    const [todoId, setTodoId] = useRecoilState(todoIdState)
+    const [todoName, setTodoName] = useRecoilState(todoNameState)
+    const [todoContent, setTodoContent] = useRecoilState(todoContentState)
+    const [todoList, setTodoList] = useRecoilState(todoListState)
 
     const todoIdOnChage = (event: React.ChangeEvent<HTMLInputElement>) => {
       setTodoId(event.target.value)
